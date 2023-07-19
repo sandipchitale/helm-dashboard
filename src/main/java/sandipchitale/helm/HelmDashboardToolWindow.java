@@ -28,6 +28,24 @@ public class HelmDashboardToolWindow {
                     .resolve("helm-dashboard.exe")
                     .toString();
 
+    private static final String X86_64_LINUX_HELM_DASHBOARD =
+            Objects.requireNonNull(PluginManagerCore.getPlugin(PluginId.getId("sandipchitale.helm-dashboard")))
+                    .getPluginPath()
+                    .resolve("helm-dashboard")
+                    .resolve("x86_64")
+                    .resolve("linux")
+                    .resolve("helm-dashboard.exe")
+                    .toString();
+
+    private static final String ARM64_DARWIN_HELM_DASHBOARD =
+            Objects.requireNonNull(PluginManagerCore.getPlugin(PluginId.getId("sandipchitale.helm-dashboard")))
+                    .getPluginPath()
+                    .resolve("helm-dashboard")
+                    .resolve("arm64")
+                    .resolve("darwin")
+                    .resolve("helm-dashboard")
+                    .toString();
+
     private final JPanel contentToolWindow;
 
     private static JBCefBrowser browser;
